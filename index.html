@@ -1,13 +1,156 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
+		<title>Watson Chapter8-9HandsOnExercise</title> 
 		<meta charset="utf-8"> 
 		<style>
-		
+			body {
+				background-color: #4b6b70;
+			}
+            table {
+                margin: auto;
+                border: 5px solid #203e42;
+                border-spacing: 0px;
+				background-color: #99baba;
+            }
+            td, th {
+                padding: 0.5em;
+            }
+            caption {
+                font-size: 1.2em;
+            }
+            #wrapper {
+                display: grid;
+            }
+            form {
+                background-color: #99baba;
+                font-family: Arial, sans-serif;
+                padding: 10px;
+                min-width: 400px;
+            }
+            fieldset {
+                border: 2px ridge #000;
+                padding: 10px;
+            }
+            label {
+                float: left;
+                width: auto;
+                text-align: right;
+                padding-right: 10px;
+                clear: left;
+                margin-top: 10px;
+            }
+            input, textarea {
+                margin-top: 10px;
+                display: block;
+            }
+            #nameEmail {
+                grid-column: 1/2;
+            }
+            #genreInfo {
+                grid-column: 2/3;
+            }
+            #comments {
+                grid-column: 3/3;
+            }
+            input[type="radio"], input[type="checkbox"] {
+                display: inline;
+            }
+			@media only screen and (max-width: 768px) {
+				#nameEmail {
+                	grid-row: 1/2;
+					grid-column: 1/3;
+            	}
+            	#genreInfo {
+                	grid-row: 2/3;
+					grid-column: 1/3;
+            	}	
+            	#comments {
+                	grid-row: 3/3;
+					grid-column: 1/3;
+            	}
+
+			}
 		</style>
 	</head> 
 <body> 
-
+    <table>
+        <h1>Favorite Movie</h1>
+        <tbody>
+            <tr>
+                <th headers="time">Title</th>
+                <td headers="m">The Fast and the Furious: Tokyo Drift</td>
+            </tr>
+            <tr>
+                <th headers="time">Director</th>
+                <td headers="m">Justin Lin</td>
+			</tr>
+			<tr>
+                <th headers="time">Leading Actor</th>
+                <td headers="m">Lucas Black as Sean Boswell</td>
+			</tr>
+			<tr>
+                <th headers="time">Leading Actress</th>
+                <td headers="m">Nathalie Kelley as Neela</td>
+			</tr>
+			<tr>
+                <th headers="time">Rating</th>
+                <td headers="m">6/10 IMDB</td>
+			</tr>
+			<tr>
+                <th headers="time">Summary</th>
+                <td headers="m">Sean Boswell is a high school student with an odd hobby: street racing. 
+					After getting caught up with the authorities in the US, Sean moves to Japan with his father. 
+					In Japan, street racing is a bit different - the style, stakes, and prizes are all overwhelming. 
+					By a stroke of luck, Sean meets Han, a local racing legend, who takes Sean under his wing.
+					After training, Sean risks it all when he faces the local champion for the ultimate prize: the champion's girlfriend.</td>
+			</tr>
+			<tr>
+                <th headers="time">Link</th>
+                <td headers="m"><a href="https://www.imdb.com/title/tt0463985/" target="_blank">IMDB Page</a></td>
+            </tr>
+        </tbody>
+    </table>
+	<h1>Music Survey Form</h1>
+		<form>
+        	<div id="wrapper">
+				<fieldset id="nameEmail">
+					<legend>Name and Email</legend>
+					<label for="myName">Name:</label>
+					<input type="text" name="myName" id="myName" placeholder="your fist and last name">
+					<label for="myEmail">Email:</label>
+					<input type="text" name="myEmail" id="myEmail" placeholder="your email">
+				</fieldset>
+				<fieldset id="genreInfo">
+					<legend>Genre Information</legend>
+					Favorite Genre:<br>
+					<input type="radio" name="myGenre" id="Rock" value="Rock">Rock<br>
+					<input type="radio" name="myGenre" id="Rap" value="Rap">Rap<br>
+					<input type="radio" name="myGenre" id="Country" value="Country">Country<br><br>
+					
+					Which instruments can you play?:<br>
+					<input type="checkbox" name="myInst" id="Guitar" value="Guitar">Guitar<br>
+					<input type="checkbox" name="myInst" id="Drums" value="Drums">Drums<br>
+					<input type="checkbox" name="myInst" id="Bass" value="Bass">Bass<br>
+				</fieldset>
+				<fieldset id="comments">
+					Would you say that you're a big fan of music?:
+					<select size="3" name="music" id="music">
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+						<option value="No">Maybe</option>
+						<option value="No">I don't know</option>
+					</select><br>
+					<legend>Comments</legend>
+					<label for="myComments">Comments</label>
+					<textarea name="myComments" id="myComments" rows="3" cols="60"></textarea>
+				</fieldset>
+			</div>
+			<input id="mySubmit" type="submit" value="Submit">
+			<input id="myReset" type="reset" value="Reset">
+		</form>
+		<h3>Zach Watson</h3>
+		<h3>s531994@nwmissouri.edu</h3>
 </body> 
 </html> 
+ 
